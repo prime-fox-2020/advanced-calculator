@@ -2,19 +2,42 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (angka) {
+    this.angka = angka
   }
-  add () {
+  add (angka) {
+    this.angka += angka
+    return this
   }
-  subtract () {
+  subtract (angka) {
+    this.angka -= angka
+    return this
   }
-  multiply () {
+  multiply (angka) {
+    this.angka *= angka
+    return this
   }
-  divide () {
+  divide (angka) {
+    this.angka /= angka
+    return this
   }
-  square () {
+  square (pangkat) {
+    this.angka = Math.pow(this.angka, pangkat)
+    return this
   }
   squareRoot () {
+    this.angka = Math.sqrt(this.angka)
+    return this
+  }
+  luasLingkaran(angka){
+    const pi = 3.14
+    this.angka = pi * this.angka * this.angka
+    return this
+  }
+  kelilingLingkaran(angka){
+    const pi = 3.14
+    this.angka = pi * (this.angka + this.angka)
+    return this
   }
 }
 
