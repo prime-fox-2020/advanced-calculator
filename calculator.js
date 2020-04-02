@@ -2,8 +2,8 @@
 
 class Calculator {
   constructor (addNum = 0) {
-    this.addNum = addNum
-    this.result = addNum
+    this.addNum = addNum // 1st input number
+    this.result = addNum // calculated number
   }
   add (...args) {
     this.result += args.reduce(reducerAdd)
