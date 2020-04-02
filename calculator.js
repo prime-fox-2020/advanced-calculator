@@ -2,19 +2,36 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (angka = 0) {
+    this.hasil = angka;
+    return this;
   }
-  add () {
+  add (angka) {
+    this.hasil += angka;
+    return this;
   }
-  subtract () {
+  subtract (angka) {
+    this.hasil -= angka;
+    return this;
   }
-  multiply () {
+  multiply (angka) {
+    this.hasil *= angka;
+    return this;
   }
-  divide () {
+  divide (angka) {
+    this.hasil /= angka;
+    return this;
   }
-  square () {
+  square (angka) {
+    this.hasil = Math.pow(this.hasil, angka);
+    return this;
   }
   squareRoot () {
+    this.hasil = Math.sqrt(this.hasil);
+    return this;
+  }
+  pi () {
+    return Math.PI;
   }
 }
 
@@ -26,4 +43,4 @@ class Calculator {
 * - Method Chaining
 */
 
-module.exports = Calculator
+module.exports = Calculator;
