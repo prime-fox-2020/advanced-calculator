@@ -1,20 +1,51 @@
 'use strict'
 
 class Calculator {
-  //write your code here
-  constructor () {
+  constructor (num) {
+    this.num = num
   }
-  add () {
+  add (angka) {
+    this.num += angka
+    return this
   }
-  subtract () {
+  subtract (angka) {
+    this.num -= angka
+    return this
   }
-  multiply () {
+  multiply (angka) {
+    this.num *= angka
+    return this
   }
-  divide () {
+  divide (angka) {
+    this.num /= angka
+    return this
   }
   square () {
+    this.num = Math.pow(this.num, 2)
+    return this
   }
   squareRoot () {
+    this.num = Math.sqrt(this.num)
+    return this
+  }
+  cubeRoot () {
+    this.num = Math.cbrt(this.num)
+    return this
+  }
+  root (angka) {
+    this.num = Math.pow(this.num, 1/angka)
+    return this
+  }
+  power (angka) {
+    this.num = Math.pow(this.num, angka)
+    return this
+  }
+
+  areaCircle() {
+    this.num = Math.PI * Math.pow(this.num, 2)
+  }
+  circumferenceCircle() {
+    this.num = Math.PI * (this.num * 2)
   }
 }
 
