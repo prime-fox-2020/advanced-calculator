@@ -11,6 +11,6 @@ class Person{
   }
 }
 
-const object1 = new Person('jap1', 'hendy1', 20,'bencong')
+const object1 = new Person('jap1', 'hendy1', 20,'laki')
 
 console.log(object1.nama())
