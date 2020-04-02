@@ -2,19 +2,48 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (value) {
+    this.value= value
   }
-  add () {
+  add (number) {
+    this.value+=number
+    return this
   }
-  subtract () {
+  subtract (number) {
+    this.value-=number
+    return this
   }
-  multiply () {
+  multiply (number) {
+    this.value*=number
+    return this
   }
-  divide () {
+  divide (number) {
+    this.value/=number
+    return this
   }
   square () {
+    this.value = Math.pow(this.value, 2)
+    return this
   }
   squareRoot () {
+    this.value=Math.sqrt(this.value)
+    return this
+  }
+  luasLingkaran(){
+    this.value = Math.PI * Math.pow(this.value, 2)
+    return this
+  }
+  kellLingkaran(){
+    this.value=2*Math.PI*this.value
+    return this
+  }
+  pangkat(number){
+    this.value**=number
+    return this
+  }
+  akarTIga(){
+    this.value = Math.cbrt(this.value)
+    return this
   }
 }
 
