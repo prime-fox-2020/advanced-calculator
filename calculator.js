@@ -3,18 +3,35 @@
 class Calculator {
   //write your code here
   constructor () {
+    this.result = 0
   }
-  add () {
+  add (num) {
+    this.result += num
+    return this
   }
-  subtract () {
+  subtract (num) {
+    this.result -= num
+    return this
   }
-  multiply () {
+  multiply (num) {
+    this.result *= num
+    return this
   }
-  divide () {
+  divide (num) {
+    this.result /= num
+    return this
   }
-  square () {
+  square (num) {
+    this.result = Math.pow(this.result,num)
+    return this
   }
-  squareRoot () {
+  squareRoot (num) {
+    this.result = Math.sqrt(num)
+    return this
+  }
+  luasLingkaran (jarijari){
+    this.result = Math.floor((22/7) * jarijari * jarijari)
+    return this
   }
 }
 
