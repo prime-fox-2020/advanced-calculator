@@ -1,22 +1,48 @@
 'use strict'
 
 class Calculator {
-  //write your code here
-  constructor () {
+  constructor (addNum = 0) {
+    this.addNum = addNum
+    this.result = addNum
   }
-  add () {
+  add (...args) {
+    this.result += args.reduce(reducerAdd)
+    return this
   }
-  subtract () {
+  subtract (...args) {
+    this.result -= args.reduce(reducerSubstarct)
+    return this
   }
-  multiply () {
+  multiply (...args) {
+    this.result *= args.reduce(reducerMultiply)
+    return this    
   }
-  divide () {
+  divide (...args) {
+    this.result /= args.reduce(reducerDivide)
+    return this
   }
-  square () {
+  square (...args) {
+    args.forEach(loop => {
+      this.result = Math.pow(this.result, loop)
+    })
+    return this
   }
   squareRoot () {
+    this.result = Math.sqrt(this.result)
+    return this
+  }
+
+  pi () {
+    return Math.PI
   }
 }
+
+
+const reducerAdd = (accumulator, currentValue) => accumulator + currentValue
+const reducerSubstarct = (accumulator, currentValue) => accumulator - currentValue
+const reducerMultiply = (accumulator, currentValue) => accumulator * currentValue
+const reducerDivide = (accumulator, currentValue) => accumulator / currentValue
+
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
@@ -25,5 +51,6 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
+
 
 module.exports = Calculator
