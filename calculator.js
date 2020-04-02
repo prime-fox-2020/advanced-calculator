@@ -30,7 +30,7 @@ class Calculator {
     return this
   }
   constPi(){
-    this.number = this.number*Math.PI
+    this.number *= Math.PI
     return this
   }
 }
