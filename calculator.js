@@ -2,19 +2,41 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (result = 0) {
+    this.result = result
   }
-  add () {
+
+  add (number) {
+    this.result += number
+    return this
   }
-  subtract () {
+  subtract (number) {
+    this.result -= number
+    return this
+    
   }
-  multiply () {
+  multiply (number) {
+    this.result *= number
+    return this
   }
-  divide () {
+  divide (number) {
+    this.result /= number
+    return this
   }
   square () {
+    this.result ** 2
+    return this
   }
-  squareRoot () {
+  powerOf (number) {
+    this.result ** number
+    return this
+  }
+  squareRoot (number = this.result) {
+    this.result = Math.sqrt(number)
+    return this
+  }
+  circleArea (radius) {
+    return this.result = Math.PI * radius * radius
   }
 }
 
