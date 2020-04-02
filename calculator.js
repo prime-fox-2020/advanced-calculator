@@ -2,21 +2,44 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor(num1,num2) {
+    this.value = 0
+
+    return this.value
   }
-  add () {
+  add(value) {
+    this.value += value
+    return this;
   }
-  subtract () {
+  subtract(value) {
+    this.value -= value
+    return this;
   }
-  multiply () {
+  multiply(value) {
+    this.value *= value
+    return this;
   }
-  divide () {
+  divide(value) {
+    this.value /= value
+    return this;
   }
-  square () {
+  square(value) {
+    this.value = Math.pow(this.value, value)
+    return this;
   }
-  squareRoot () {
+  squareRoot() {
+    this.value = Math.sqrt(this.value)
+    return this;
   }
+
+
 }
+
+const nomor = new Calculator()
+console.log(nomor.add(9)
+                  .subtract(5)
+                  .multiply(7)
+                  .square(5))
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
