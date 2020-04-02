@@ -2,20 +2,48 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (num = 0) {
+    this.hasil = num
   }
-  add () {
+  add (num) {
+    console.log(`${this.hasil} tambah ${num}`)
+    this.hasil += num
+    return this
   }
-  subtract () {
+  subtract (num) {
+    console.log(`${this.hasil} kurang ${num}`)
+    this.hasil -= num
+    return this
   }
-  multiply () {
+  multiply (num) {
+    console.log(`${this.hasil} kali ${num}`)
+    this.hasil *= num
   }
-  divide () {
+  divide (num) {
+    console.log(`${this.hasil} bagi ${num}`)
+    this.hasil /= num
+    return this
   }
-  square () {
+  square (num) {
+    console.log(`${this.hasil} pangkat ${num}`)
+    this.hasil = Math.pow(this.hasil,num)
+    return this
   }
-  squareRoot () {
+  squareRoot (num) {
+    console.log(`${this.hasil} akar pangkat ${num}`)
+    this.hasil = Math.pow(this.hasil, 1/num)
+    return this
   }
+  pi () {
+    this.hasil *= Math.PI
+    return this
+  }
+  circle () {
+    let radius = this.hasil/2
+    this.hasil = Math.round(Math.PI * radius * radius)
+    return this
+  }
+
 }
 
 /** note : you can use several features from ecmascript, such as:
